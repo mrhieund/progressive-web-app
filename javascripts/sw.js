@@ -1,5 +1,9 @@
-var cacheName = 'demo-1';
+var cacheName = 'demo-2';
 var filesToCache = [
+  '/javascripts/app.js',
+  '/stylesheets/main.css',
+  '/stylesheets/bootstrap.min.css',
+  '/data.json'
 ];
 
 self.addEventListener('install', function(e) {
