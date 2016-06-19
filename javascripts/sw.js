@@ -1,9 +1,11 @@
-var cacheName = 'demo-2';
+var cacheName = 'demo-3';
 var filesToCache = [
   '/javascripts/app.js',
   '/stylesheets/main.css',
   '/stylesheets/bootstrap.min.css',
-  '/data.json'
+  '/data.json',
+  '/images/zalia-0031-329564-1.jpg',
+  '/images/zalia-2758-849564-1.jpg'
 ];
 
 self.addEventListener('install', function(e) {
