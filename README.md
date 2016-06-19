@@ -1,0 +1,1 @@
+This is a demo prototype for progressive web app
