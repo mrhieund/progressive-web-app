@@ -1,6 +1,6 @@
 var product_template = document.getElementById('product-template');
 data = fetch('/data.json').then(function(response){
-    console.log(response)
+    console.log(response.json)
     var processed_product_template = parse(product_template.text, response.json);
     var catalog = document.getElementById('catalog');
     catalog.insertAdjacentHTML('beforeend', processed_product_template);
