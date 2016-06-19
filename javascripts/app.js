@@ -25,7 +25,7 @@ fetch('data.json').then(function(response) {
 
 if ('serviceWorker' in navigator) {
 navigator.serviceWorker
-         .register('/javascripts/sw.js')
+         .register('/sw.js')
          .then(function() { console.log('Service Worker Registered') })
          .catch(function(error) { console.log('Registration failed with ' + error)});
 }
