@@ -1,20 +1,23 @@
 var product_template = document.getElementById('product-template');
-data = fetch('/data.json').then(function(response){
-    console.log(response.json)
-    var processed_product_template = parse(product_template.text, response.json);
-    var catalog = document.getElementById('catalog');
-    catalog.insertAdjacentHTML('beforeend', processed_product_template);
-    catalog.insertAdjacentHTML('beforeend', processed_product_template);
+data = fetch('data.json').then(function(response) {
+    return response.json().then(function(json) {
+        var catalog = document.getElementById('catalog');
+        json.forEach(function(data){
+            htmlText = parse(product_template.text, data);
+            catalog.insertAdjacentHTML('beforeend', htmlText);    
+        });
+    })
 }).catch(function(error) { console.log(error);});
 
 parse = function(text, data) {
     var newText;
-    newText = text.replace('{{image}}', data.image);
-    newText = text.replace('{{brand}}', data.brand);
-    newText = text.replace('{{alt}}', data.alt);
-    newText = text.replace('{{title}}', data.title);
-    newText = text.replace('{{price}}', data.price);
-    newText = text.replace('{{name}}', data.name);
+    console.log(data);
+    newText = text.replace('{{image}}', data.image)
+                .replace('{{brand}}', data.brand)
+                .replace('{{alt}}', data.alt)
+                .replace('{{title}}', data.title)
+                .replace('{{price}}', data.price)
+                .replace('{{name}}', data.name);
     return newText;
 }
 
