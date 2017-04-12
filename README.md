@@ -1,1 +1,1 @@
-This is a demo prototype for progressive web app
+This is a profile of mine using progressive web app and amp

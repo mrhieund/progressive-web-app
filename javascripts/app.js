@@ -1,24 +1,29 @@
 (function() {
   'use strict';
 
-var product_template = document.getElementById('product-template');
-var parse = function(text, data) {
+const profile_template = document.getElementById('profile-template');
+const parse = function(text, data) {
     var newText;
-    newText = text.replace('{{image}}', data.image)
-                .replace('{{brand}}', data.brand)
-                .replace('{{alt}}', data.alt)
-                .replace('{{title}}', data.title)
-                .replace('{{price}}', data.price)
-                .replace('{{name}}', data.name);
+    newText = text.replace(/{{full_name}}/g, data.full_name)
+                .replace(/{{avatar}}/g, data.avatar)
+                .replace(/{{first_name}}/g, data.first_name)
+                .replace(/{{job_title}}/g, data.job_title)
+                .replace(/{{github}}/g, data.github)
+                .replace(/{{linkedin}}/g, data.linkedin)
+                .replace(/{{location}}/g, data.location)
+                .replace(/{{hometown}}/g, data.hometown)
+                .replace(/{{interests}}/g, data.interests)
+                .replace(/{{company}}/g, data.company)
+                .replace(/{{goals}}/g, data.goals);
     return newText;
 }
 
 fetch('data.json').then(function(response) {
     return response.json().then(function(json) {
-        var catalog = document.getElementById('catalog');
+        const main = document.getElementById('main');
         json.forEach(function(data){
-            var htmlText = parse(product_template.text, data);
-            catalog.insertAdjacentHTML('beforeend', htmlText);    
+            const htmlText = parse(profile_template.text, data);
+            main.insertAdjacentHTML('beforeend', htmlText);
         });
     })
 }).catch(function(error) { console.log(error);});

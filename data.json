@@ -1,4 +1,17 @@
 [
-    {"brand":"Zalia", "name":"Lace Mermaid Dress", "price":"99.90&nbsp;SGD", "image":"images/zalia-0031-329564-1.jpg", "alt":"Zalia black and gold Lace Mermaid Dress", "title":"Lace Mermaid Dress from Zalia in black and gold"},
-    {"brand":"Zalia", "name":"Layered Off Shoulder Dress", "price":"79.90&nbsp;SGD", "image":"images/zalia-2758-849564-1.jpg", "alt":"Zalia purple Layered Off Shoulder Dress", "title":"Layered Off Shoulder Dress from Zalia in purple"}
+  {
+    "full_name":"Nguyen Duc Hieu",
+    "first_name": "Hieu",
+    "job_title": "Software Engineer",
+    "avatar": "/images/avatar.jpeg",
+    "github": "https://github.com/mrhieund",
+    "linkedin": "https://www.linkedin.com/in/hieu-nguyen-duc-24b45348/",
+    "location": "Singapore",
+    "hometown": "Vietnam",
+    "interests": "Algorithm, Problem solving, Intelligence System",
+    "company": "Zalora",
+    "goals": "a scalable system, and user friendly web experience",
+    "skills": ["php", "mysql", "javascript", "CSS", "Java", "C/C++", "Python"],
+    "tools": ["Git", "SVN"]
+  }
 ]

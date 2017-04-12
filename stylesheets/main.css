@@ -1,0 +1,30 @@
+body {
+  color: #182153;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social__bg {
+  background-color: #182153;
+  height: 5.5em;
+}
+.social__logo {
+  margin-right: 1.8em;
+}
+.octicon {
+  fill: #FFFFFF;
+}
+.about {
+  text-align: justify;
+  line-height: 1.6em;
+  font-size: 18px;
+}
+.h5 {
+  font-size: 20px;
+}
+.avatar {
+  padding-left: 0px;
+  padding-right: 0px;
+}
