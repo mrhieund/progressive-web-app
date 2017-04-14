@@ -1,4 +1,4 @@
-var cacheName = 'demo-3';
+var cacheName = 'demo-4';
 var filesToCache = [
   '/javascripts/app.js',
   '/stylesheets/main.css',
