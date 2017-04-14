@@ -8,7 +8,7 @@ const reduce = function(arr, initValue, connectStartValue, connectEndValue) {
 const parse = function(text, data) {
     var newText;
     var exp = reduce(data.experience_exp, "", "<p>", "</p>");
-    var skills = reduce(data.skills, "", "<div>", "</div>");
+    var skills = reduce(data.skills, "", "<div class='col-xs-6'>", "</div>");
     newText = text.replace(/{{full_name}}/g, data.full_name)
                 .replace(/{{avatar}}/g, data.avatar)
                 .replace(/{{first_name}}/g, data.first_name)
