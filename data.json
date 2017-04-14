@@ -11,7 +11,16 @@
     "interests": "Algorithm, Problem solving, Intelligence System",
     "company": "Zalora",
     "goals": "a scalable system, and user friendly web experience",
-    "skills": ["php", "mysql", "javascript", "CSS", "Java", "C/C++", "Python"],
-    "tools": ["Git", "SVN"]
+    "skills": ["PHP", "Mysql", "Javascript", "CSS", "Java", "C/C++", "Python"],
+    "tools": ["Git", "SVN"],
+    "experience_year": "2012 - now",
+    "experience_exp": [
+        "Develop and design cross shopping and shared stock on multiple websites",
+        "Work on some projects like personalized sorting",
+        "Build high scalable and optimized system can handle 4 times of normal traffic",
+        "Research, evaluate and apply new technologies into systems like PWA, AMP,...",
+        "Working to improve work flow process of the company result in cost-saving",
+        "Train and provide guidance for others' members in the team"
+    ]
   }
 ]

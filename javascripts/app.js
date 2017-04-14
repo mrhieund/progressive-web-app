@@ -2,8 +2,13 @@
   'use strict';
 
 const profile_template = document.getElementById('profile-template');
+const reduce = function(arr, initValue, connectStartValue, connectEndValue) {
+  return arr.reduce(function(acc, currentValue){return acc + connectStartValue + currentValue + connectEndValue}, initValue)
+}
 const parse = function(text, data) {
     var newText;
+    var exp = reduce(data.experience_exp, "", "<p>", "</p>");
+    var skills = reduce(data.skills, "", "<div>", "</div>");
     newText = text.replace(/{{full_name}}/g, data.full_name)
                 .replace(/{{avatar}}/g, data.avatar)
                 .replace(/{{first_name}}/g, data.first_name)
@@ -14,7 +19,10 @@ const parse = function(text, data) {
                 .replace(/{{hometown}}/g, data.hometown)
                 .replace(/{{interests}}/g, data.interests)
                 .replace(/{{company}}/g, data.company)
-                .replace(/{{goals}}/g, data.goals);
+                .replace(/{{goals}}/g, data.goals)
+                .replace(/{{experience_year}}/g, data.experience_year)
+                .replace(/{{experience_exp}}/g, exp)
+                .replace(/{{skills}}/g, skills);
     return newText;
 }
 
